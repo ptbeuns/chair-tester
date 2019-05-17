@@ -45,8 +45,8 @@ void setup()
 
 
 void storeData(byte* storage, uint32_t *data){
-  storage[0] = (*data >> 24) & 0xFFFFFF;
-  storage[1] = (*data >> 16) & 0xFFFF;
+  storage[0] = (*data >> 24) & 0xFF;
+  storage[1] = (*data >> 16) & 0xFF;
   storage[2] = (*data >> 8) & 0xFF;
   storage[3] = *data & 0xFF;
 }
